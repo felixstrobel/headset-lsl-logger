@@ -217,11 +217,28 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!4 &68040452 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400002, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+  m_PrefabInstance: {fileID: 694665539}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &68040455 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400006, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
   m_PrefabInstance: {fileID: 694665539}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &68040456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68040448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7da207a31e91994eb604d2a686fbe70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LogEyeIntrinsics
 --- !u!1 &89977392
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,7 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Calibration
   rig: {fileID: 694665547}
   board: {fileID: 1894572743}
-  runCalibration: 1
+  runCalibration: 0
   startDelay: 10
   holdTime: 5
   gapTime: 1
@@ -575,6 +592,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 68040450}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 68040456}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 871263449}
@@ -1007,6 +1027,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1964602099}
   - component: {fileID: 1964602098}
+  - component: {fileID: 1964602100}
   m_Layer: 0
   m_Name: Tracking
   m_TagString: Untagged
@@ -1042,6 +1063,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1964602100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964602097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280de470824df5c48aec361abdcd39f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FrameMarker
+  anchor: {fileID: 68040452}
+  onMat: {fileID: 2100000, guid: 4c6fe8da4583248439bf1ac39759d55b, type: 2}
+  offMat: {fileID: 2100000, guid: 32ec8c4eecf72d449ae7354987ba2965, type: 2}
+  bits: 12
+  yawDeg: -42
+  cellDeg: 2.5
+  distance: 1
 --- !u!1 &2114801850
 GameObject:
   m_ObjectHideFlags: 0

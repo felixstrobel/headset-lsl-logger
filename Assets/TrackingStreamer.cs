@@ -30,7 +30,8 @@ public class QuestTrackingStreamer : MonoBehaviour
         var chans = info.desc().append_child("channels");
         foreach (var l in Labels) chans.append_child("channel").append_child_value("label", l);
         info.desc().append_child_value("coordinates", "unity_lefthanded_tracking_space");
-        trackingOutlet = new StreamOutlet(info);
+
+        trackingOutlet = new StreamOutlet(info, 1);
     }
 
     void Update()
